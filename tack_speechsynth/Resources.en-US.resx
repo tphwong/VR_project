@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String0" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>Call History</value>
+  </data>
+  <data name="String100" xml:space="preserve">
+    <value>Address Book</value>
+  </data>
+  <data name="String101" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="String102" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="String103" xml:space="preserve">
+    <value>Destination Information</value>
+  </data>
+  <data name="String104" xml:space="preserve">
+    <value>Traffic Information</value>
+  </data>
+  <data name="String105" xml:space="preserve">
+    <value>Emergency Services</value>
+  </data>
+  <data name="String106" xml:space="preserve">
+    <value>Police Station</value>
+  </data>
+  <data name="String107" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="String108" xml:space="preserve">
+    <value>Dealership</value>
+  </data>
+  <data name="String109" xml:space="preserve">
+    <value>Roadside Assistance</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>Redial</value>
+  </data>
+  <data name="String110" xml:space="preserve">
+    <value>Turn Guidance On</value>
+  </data>
+  <data name="String111" xml:space="preserve">
+    <value>Turn Guidance Off</value>
+  </data>
+  <data name="String112" xml:space="preserve">
+    <value>Show Route</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Dial</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Call &lt;John Smith&gt;</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Dialed</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Missed</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Change Bluetooth Device</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Send Message to &lt;John Smith&gt;</value>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>Send Message to &lt;John Smith&gt; &lt;Message&gt;</value>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>Other Numbers</value>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>Change Message</value>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>Read Message</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>Call &lt;John Smith&gt; on Mobile</value>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>Radio</value>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>FM</value>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>FM &lt;89.1&gt;</value>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>AM &lt;1080&gt;</value>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>AM &lt;531~1701&gt;</value>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>&lt;87.5~107.9&gt;</value>
+  </data>
+  <data name="String37" xml:space="preserve">
+    <value>&lt;530~1710&gt;</value>
+  </data>
+  <data name="String38" xml:space="preserve">
+    <value>&lt;531~1701&gt;</value>
+  </data>
+  <data name="String39" xml:space="preserve">
+    <value>Preset &lt;1~40&gt;</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Call &lt;John Smith&gt; at Work</value>
+  </data>
+  <data name="String40" xml:space="preserve">
+    <value>SiriusXM</value>
+  </data>
+  <data name="String41" xml:space="preserve">
+    <value>SiriusXM &lt;118&gt;</value>
+  </data>
+  <data name="String42" xml:space="preserve">
+    <value>Channel &lt;118&gt;</value>
+  </data>
+  <data name="String43" xml:space="preserve">
+    <value>Pandora Radio</value>
+  </data>
+  <data name="String44" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>Thumbs Up</value>
+  </data>
+  <data name="String46" xml:space="preserve">
+    <value>Thumbs Down</value>
+  </data>
+  <data name="String47" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="String48" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="String49" xml:space="preserve">
+    <value>CD</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>Call &lt;John Smith&gt; at Home</value>
+  </data>
+  <data name="String50" xml:space="preserve">
+    <value>iPod</value>
+  </data>
+  <data name="String51" xml:space="preserve">
+    <value>Bluetooth Audio</value>
+  </data>
+  <data name="String52" xml:space="preserve">
+    <value>AUX</value>
+  </data>
+  <data name="String53" xml:space="preserve">
+    <value>My Music</value>
+  </data>
+  <data name="String54" xml:space="preserve">
+    <value>USB</value>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>Track &lt;1~99&gt;</value>
+  </data>
+  <data name="String58" xml:space="preserve">
+    <value>Shuffle</value>
+  </data>
+  <data name="String59" xml:space="preserve">
+    <value>Shuffle Off</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Call &lt;John Smith&gt; on Other</value>
+  </data>
+  <data name="String60" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="String61" xml:space="preserve">
+    <value>Repeat Off</value>
+  </data>
+  <data name="String62" xml:space="preserve">
+    <value>Voice Memo</value>
+  </data>
+  <data name="String63" xml:space="preserve">
+    <value>UVO eServices</value>
+  </data>
+  <data name="String64" xml:space="preserve">
+    <value>eServices Guide</value>
+  </data>
+  <data name="String65" xml:space="preserve">
+    <value>Roadside Assist</value>
+  </data>
+  <data name="String66" xml:space="preserve">
+    <value>Vehicle Diagnostics</value>
+  </data>
+  <data name="String67" xml:space="preserve">
+    <value>My POIs</value>
+  </data>
+  <data name="String68" xml:space="preserve">
+    <value>Local Search</value>
+  </data>
+  <data name="String69" xml:space="preserve">
+    <value>UVO EV Services</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Call &lt;Name&gt;&lt;Category&gt;</value>
+  </data>
+  <data name="String70" xml:space="preserve">
+    <value>EV Services Guide</value>
+  </data>
+  <data name="String71" xml:space="preserve">
+    <value>UVO</value>
+  </data>
+  <data name="String72" xml:space="preserve">
+    <value>Virtual Assistant</value>
+  </data>
+  <data name="String73" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="String74" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="String75" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="String76" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="String77" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="String78" xml:space="preserve">
+    <value>Line &lt;#&gt;</value>
+  </data>
+  <data name="String79" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>Dial Number</value>
+  </data>
+  <data name="String80" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="String81" xml:space="preserve">
+    <value>Manual Input</value>
+  </data>
+  <data name="String82" xml:space="preserve">
+    <value>CarPlay</value>
+  </data>
+  <data name="String83" xml:space="preserve">
+    <value>Android Auto</value>
+  </data>
+  <data name="String84" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="String85" xml:space="preserve">
+    <value>Find &lt;POI or Address&gt;</value>
+  </data>
+  <data name="String86" xml:space="preserve">
+    <value>Find Address in &lt;State&gt;</value>
+  </data>
+  <data name="String87" xml:space="preserve">
+    <value>Find &lt;POI&gt;</value>
+  </data>
+  <data name="String88" xml:space="preserve">
+    <value>Pause Route</value>
+  </data>
+  <data name="String89" xml:space="preserve">
+    <value>Resume Route</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>Dial &lt;Phone #&gt;</value>
+  </data>
+  <data name="String90" xml:space="preserve">
+    <value>Cancel Route</value>
+  </data>
+  <data name="String91" xml:space="preserve">
+    <value>Go Home</value>
+  </data>
+  <data name="String92" xml:space="preserve">
+    <value>Change Home</value>
+  </data>
+  <data name="String93" xml:space="preserve">
+    <value>Go to Work</value>
+  </data>
+  <data name="String94" xml:space="preserve">
+    <value>Change Work</value>
+  </data>
+  <data name="String95" xml:space="preserve">
+    <value>Previous Points</value>
+  </data>
+  <data name="String96" xml:space="preserve">
+    <value>Previous Destinations</value>
+  </data>
+  <data name="String97" xml:space="preserve">
+    <value>Previous Starting Points</value>
+  </data>
+  <data name="String98" xml:space="preserve">
+    <value>Frequently Visited Points</value>
+  </data>
+  <data name="String99" xml:space="preserve">
+    <value>Route Options</value>
+  </data>
+</root>
