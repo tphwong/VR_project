@@ -221,339 +221,389 @@ class Window(QtGui.QMainWindow):
 		cmd = ""
 		
 		result = ""
+		
+		if self.languageBox.currentText() == "en-US":
 		# English - Navigation
-		if self.cmdBox.currentText() == "Address book":
-			print("addressBook")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/addressBook")
-		elif self.cmdBox.currentText() == "Cancel route":
-			print("cancelRoute")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/cancelRoute")
-		elif self.cmdBox.currentText() == "Change home":
-			print("changeHome")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/changeHome")
-		elif self.cmdBox.currentText() == "Change work":
-			print("changeWork")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/changeWork")
-		elif self.cmdBox.currentText() == "Destination information":
-			print("destinationInformation")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/destinationInformation")
-		elif self.cmdBox.currentText() == "Find 46501 Commerce Center Drm Plymouth, Michigan":
-			print("find46501CommerceCenterDrPlymouthMichigan")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/find46501CommerceCenterDrPlymouthMichigan")
-		elif self.cmdBox.currentText() == "Find Starbucks":
-			print("findStarbucks")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/findStarbucks")
-		elif self.cmdBox.currentText() == "Frequently visited points":
-			print("frequentlyVisitedPoints")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/frequentlyVisitedPoints")
-		elif self.cmdBox.currentText() == "Go home":
-			print("goHome")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/goHome")
-		elif self.cmdBox.currentText() == "Go to work":
-			print("goToWork")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/goToWork")
-		elif self.cmdBox.currentText() == "Pause route":
-			print("pauseRoute")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/pauseRoute")
-		elif self.cmdBox.currentText() == "Previous destinations":
-			print("previousDestinations")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousDestinations")
-		elif self.cmdBox.currentText() == "Previous points":
-			print("previousPoints")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousPoints")
-		elif self.cmdBox.currentText() == "Previous starting points":
-			print("previousStartingPoints")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousStartingPoints")
-		elif self.cmdBox.currentText() == "Resume route":
-			print("resumeRoute")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/resumeRoute")
-		elif self.cmdBox.currentText() == "Route Options":
-			print("routeOptions")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/routeOptions")
-		elif self.cmdBox.currentText() == "Show route":
-			print("showRoute")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/showRoute")
-		elif self.cmdBox.currentText() == "Traffic information":
-			print("trafficInformation")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/trafficInformation")
-		elif self.cmdBox.currentText() == "Turn guidance off":
-			print("turnGuidanceOff")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOff")
-		elif self.cmdBox.currentText() == "Turn guidance on":
-			print("turnGuidanceOn")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOn")
-		elif self.cmdBox.currentText() == "Zoom in":
-			print("zoomIn")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomIn")
-		elif self.cmdBox.currentText() == "Zoom out":
-			print("zoomOut")
-			result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomOut")
-		# English - Phone
-		elif self.cmdBox.currentText() == "Call":
-			print("call")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/call")
-		elif self.cmdBox.currentText() == "Call John Smith":
-			print("callJohnSmith")
-			result = vvrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmith")
-		elif self.cmdBox.currentText() == "Call John Smith on mobile":
-			print("callJohnSmithOnMobile")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmithOnMobile")
-		elif self.cmdBox.currentText() == "Change Bluetooth Device":
-			print("changeBluetoothDevice")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/changeBluetoothDevice")
-		elif self.cmdBox.currentText() == "Dial 2486626203":
-			print("dial2486626203")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/dial2486626203")
-		elif self.cmdBox.currentText() == "Dial number":
-			print("dialNumber")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/dialNumber")
-		elif self.cmdBox.currentText() == "Send message to John Smith":
-			print("sendMessageToJohnSmith")
-			result = vrTest(ADB_DEVICE, "en-US", "Phone/sendMessageToJohnSmith")
-		# English - Radio
-		elif self.cmdBox.currentText() == "AM 1080":
-			print("am1080en")
-			result = vrTest(ADB_DEVICE, "en-US", "Radio/am1080en")
-		elif self.cmdBox.currentText() == "Channel 144":
-			print("channel144en")
-			result = vrTest(ADB_DEVICE, "en-US", "Radio/channel144enen")
-		elif self.cmdBox.currentText() == "FM 97.1":
-			print("fm97.1en")
-			result = vrTest(ADB_DEVICE, "en-US", "Radio/fm97.1en")
-		elif self.cmdBox.currentText() == "SiriusXM 67":
-			print("siriusXM67en")
-			result = vrTest(ADB_DEVICE, "en-US", "Radio/siriusXM67en")
+			if self.cmdBox.currentText() == "Address book":
+				print("addressBook")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/addressBook")
+			elif self.cmdBox.currentText() == "Cancel route":
+				print("cancelRoute")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/cancelRoute")
+			elif self.cmdBox.currentText() == "Change home":
+				print("changeHome")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/changeHome")
+			elif self.cmdBox.currentText() == "Change work":
+				print("changeWork")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/changeWork")
+			
+			# HU RESPONSE DEPENDS ON LOCATION... FIND SOME WAY TO NOTIFY USER
+			elif self.cmdBox.currentText() == "Destination information":
+				print("destinationInformation")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/destinationInformation")
+			
+			
+			elif self.cmdBox.currentText() == "Find 46501 Commerce Center Drm Plymouth, Michigan":
+				print("find46501CommerceCenterDrPlymouthMichigan")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/find46501CommerceCenterDrPlymouthMichigan")
+			elif self.cmdBox.currentText() == "Find Starbucks":
+				print("findStarbucks")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/findStarbucks")
+			elif self.cmdBox.currentText() == "Frequently visited points":
+				print("frequentlyVisitedPoints")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/frequentlyVisitedPoints")
+			elif self.cmdBox.currentText() == "Go home":
+				print("goHome")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/goHome")
+			elif self.cmdBox.currentText() == "Go to work":
+				print("goToWork")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/goToWork")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Pause route":
+				print("pauseRoute")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/pauseRoute")
+			
+			
+			elif self.cmdBox.currentText() == "Previous destinations":
+				print("previousDestinations")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousDestinations")
+			elif self.cmdBox.currentText() == "Previous points":
+				print("previousPoints")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousPoints")
+			elif self.cmdBox.currentText() == "Previous starting points":
+				print("previousStartingPoints")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousStartingPoints")
+			
+			#NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Resume route":
+				print("resumeRoute")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/resumeRoute")
+			
+			
+			elif self.cmdBox.currentText() == "Route Options":
+				print("routeOptions")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/routeOptions")
+			elif self.cmdBox.currentText() == "Show route":
+				print("showRoute")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/showRoute")
+			elif self.cmdBox.currentText() == "Traffic information":
+				print("trafficInformation")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/trafficInformation")
+			elif self.cmdBox.currentText() == "Turn guidance off":
+				print("turnGuidanceOff")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOff")
+			elif self.cmdBox.currentText() == "Turn guidance on":
+				print("turnGuidanceOn")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOn")
+			elif self.cmdBox.currentText() == "Zoom in":
+				print("zoomIn")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomIn")
+			elif self.cmdBox.currentText() == "Zoom out":
+				print("zoomOut")
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomOut")
+			# English - Phone
+			elif self.cmdBox.currentText() == "Call":
+				print("call")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/call")
+			elif self.cmdBox.currentText() == "Call John Smith":
+				print("callJohnSmith")
+				result = vvrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmith")
+			elif self.cmdBox.currentText() == "Call John Smith on mobile":
+				print("callJohnSmithOnMobile")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmithOnMobile")
+			elif self.cmdBox.currentText() == "Change Bluetooth Device":
+				print("changeBluetoothDevice")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/changeBluetoothDevice")
+			elif self.cmdBox.currentText() == "Dial 2486626203":
+				print("dial2486626203")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/dial2486626203")
+			elif self.cmdBox.currentText() == "Dial number":
+				print("dialNumber")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/dialNumber")
+			elif self.cmdBox.currentText() == "Send message to John Smith":
+				print("sendMessageToJohnSmith")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/sendMessageToJohnSmith")
+			# English - Radio
+			elif self.cmdBox.currentText() == "AM 1080":
+				print("am1080en")
+				result = vrTest(ADB_DEVICE, "en-US", "Radio/am1080en")
+			elif self.cmdBox.currentText() == "Channel 144":
+				print("channel144en")
+				result = vrTest(ADB_DEVICE, "en-US", "Radio/channel144enen")
+			elif self.cmdBox.currentText() == "FM 97.1":
+				print("fm97.1en")
+				result = vrTest(ADB_DEVICE, "en-US", "Radio/fm97.1en")
+			elif self.cmdBox.currentText() == "SiriusXM 67":
+				print("siriusXM67en")
+				result = vrTest(ADB_DEVICE, "en-US", "Radio/siriusXM67en")
 		
 		# French - Navigation
-		elif self.cmdBox.currentText() == "Chercher l'adresse en Quebec":
-			print("chercherLadresseEnQuebec")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/chercherLadresseEnQuebec")
-		elif self.cmdBox.currentText() == "Trouver les banque":
-			print("trouverLesBanque")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trouverLesBanque")
-		elif self.cmdBox.currentText() == "Trajet en pause":
-			print("trajetEnPause")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trajetEnPause")
-		elif self.cmdBox.currentText() == "Continuer trajet":
-			print("continuerTrajet")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/continuerTrajet")
-		elif self.cmdBox.currentText() == "Annuler l'itineraire":
-			print("annulerLitineraire")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/annulerLitineraire")
-		elif self.cmdBox.currentText() == "Informations de destination":
-			print("informationsDeDestination")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/informationsDeDestination")
-		elif self.cmdBox.currentText() == "Points Precedents":
-			print("pointsPrecedents")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsPrecedents")
-		elif self.cmdBox.currentText() == "Destinations precedentes":
-			print("destinationsPrecedentes")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/destinationsPrecedentes")
-		elif self.cmdBox.currentText() == "Points de depart precedentes":
-			print("pointsDeDepartPrecedents")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsDeDepartPrecedents")
-		elif self.cmdBox.currentText() == "Points frequentes":
-			print("pointsFrequentes")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsFrequentes")
-		elif self.cmdBox.currentText() == "Aller a la Maison":
-			print("allerALaMaison")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerALaMaison")
-		elif self.cmdBox.currentText() == "Info. Trafic":
-			print("infoTrafic")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/infoTrafic")
-		elif self.cmdBox.currentText() == "Modifier Maison":
-			print("modifierMaison")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierMaison")
-		elif self.cmdBox.currentText() == "Aller au travail":
-			print("allerAuTravail")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerAuTravail")
-		elif self.cmdBox.currentText() == "Modifier Travail":
-			print("modifierTravail")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierTravail")
-		elif self.cmdBox.currentText() == "Options itineraire":
-			print("optionsItineraire")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/optionsItineraire")
-		elif self.cmdBox.currentText() == "Afficher l'itineraire":
-			print("afficherLitineraire")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/afficherLitineraire")
-		elif self.cmdBox.currentText() == "Zoom avant":
-			print("zoomAvant")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/zoomAvant")
-		elif self.cmdBox.currentText() == "Zoom arriere":
-			print("zoomArriere")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/zoomArriere")
-		elif self.cmdBox.currentText() == "Services d'urgences":
-			print("servicesDurgences")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/servicesDurgences")
-		elif self.cmdBox.currentText() == "Poste de police":
-			print("posteDePolice")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/posteDePolice")
-		elif self.cmdBox.currentText() == "Hopital":
-			print("hopital")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/hopital")
-		elif self.cmdBox.currentText() == "Concession automobile":
-			print("concessionAutomobile")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/concessionAutomobile")
-		elif self.cmdBox.currentText() == "Carnet d'Adresses":
-			print("carnetDadresse")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/carnetDadresse")
-		elif self.cmdBox.currentText() == "Assistance routiere":
-			print("assistanceRoutiere")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/assistanceRoutiere")
-		elif self.cmdBox.currentText() == "Navigation vocale activee":
-			print("navigationVocaleActivee")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/navigationVocaleActivee")
-		elif self.cmdBox.currentText() == "Navigation vocale desactivee":
-			print("navigationVocaleDesactivee")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/navigationVocaleDesactivee")
-		# French - Phone
-		elif self.cmdBox.currentText() == "Appeler":
-			print("appeler")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appeler")
+		elif self.languageBox.currentText() == "fr-CA":
+			if self.cmdBox.currentText() == "Chercher l'adresse en Quebec":
+				print("chercherLadresseEnQuebec")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/chercherLadresseEnQuebec")
+			elif self.cmdBox.currentText() == "Trouver les banque":
+				print("trouverLesBanque")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trouverLesBanque")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Trajet en pause":
+				print("trajetEnPause")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trajetEnPause")
+			elif self.cmdBox.currentText() == "Continuer trajet":
+				print("continuerTrajet")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/continuerTrajet")
+			
+			# RE-RECORD annulerLitineraire.wav
+			elif self.cmdBox.currentText() == "Annuler l'itineraire":
+				print("annulerLitineraire")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/annulerLitineraire")
+			
+			# HU RESPONSE DEPENDS ON LOCATION... FIND SOME WAY TO NOTIFY USER
+			elif self.cmdBox.currentText() == "Informations de destination":
+				print("informationsDeDestination")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/informationsDeDestination")
+			
+			
+			elif self.cmdBox.currentText() == "Points Precedents":
+				print("pointsPrecedents")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsPrecedents")
+			elif self.cmdBox.currentText() == "Destinations precedentes":
+				print("destinationsPrecedentes")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/destinationsPrecedentes")
+			elif self.cmdBox.currentText() == "Points de depart precedentes":
+				print("pointsDeDepartPrecedents")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsDeDepartPrecedents")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Points frequentes":
+				print("pointsFrequentes")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsFrequentes")
+			
+			
+			elif self.cmdBox.currentText() == "Aller a la Maison":
+				print("allerALaMaison")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerALaMaison")
+			elif self.cmdBox.currentText() == "Info. Trafic":
+				print("infoTrafic")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/infoTrafic")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Modifier Maison":
+				print("modifierMaison")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierMaison")
+			
+			
+			elif self.cmdBox.currentText() == "Aller au travail":
+				print("allerAuTravail")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerAuTravail")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Modifier travail":
+				print("modifierTravail")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierTravail")
+			
+			
+			elif self.cmdBox.currentText() == "Options itineraire":
+				print("optionsItineraire")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/optionsItineraire")
+			elif self.cmdBox.currentText() == "Afficher l'itineraire":
+				print("afficherLitineraire")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/afficherLitineraire")
+			elif self.cmdBox.currentText() == "Zoom avant":
+				print("zoomAvant")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/zoomAvant")
+			elif self.cmdBox.currentText() == "Zoom arriere":
+				print("zoomArriere")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/zoomArriere")
+			elif self.cmdBox.currentText() == "Services d'urgences":
+				print("servicesDurgences")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/servicesDurgences")
+			elif self.cmdBox.currentText() == "Poste de police":
+				print("posteDePolice")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/posteDePolice")
+			elif self.cmdBox.currentText() == "Hopital":
+				print("hopital")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/hopital")
+			elif self.cmdBox.currentText() == "Concession automobile":
+				print("concessionAutomobile")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/concessionAutomobile")
+			elif self.cmdBox.currentText() == "Carnet d'Adresses":
+				print("carnetDadresse")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/carnetDadresse")
+			elif self.cmdBox.currentText() == "Assistance routiere":
+				print("assistanceRoutiere")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/assistanceRoutiere")
+			elif self.cmdBox.currentText() == "Navigation vocale activee":
+				print("navigationVocaleActivee")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/navigationVocaleActivee")
+			elif self.cmdBox.currentText() == "Navigation vocale desactivee":
+				print("navigationVocaleDesactivee")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/navigationVocaleDesactivee")
+			# French - Phone
+			elif self.cmdBox.currentText() == "Appeler":
+				print("appeler")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appeler")
 		
-		#elif self.cmdBox.currentText() == "Composer un numero":
-		#	print("")
-		
-		elif self.cmdBox.currentText() == "Appeler Pierre Durand":
-			print("appelerPierreDurand")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appelerPierreDurand")
-		elif self.cmdBox.currentText() == "Appeler PierDurand sur cellulaire":
-			print("appelerPierreDurandSurCellulaire")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appelerPierreDurandSurCellulaire")
-		elif self.cmdBox.currentText() == "Composer 2486626203":
-			print("composer2486626203")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Phone/composer2486626203")
-		elif self.cmdBox.currentText() == "Changer l'appareil Bluetooth":
-			print("changerLappareilBluetooth")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Phone/changerLappareilBluetooth")
-		# French - Radio
-		elif self.cmdBox.currentText() == "AM 1080":
-			print("am1080fr")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Radio/am1080fr")
-		elif self.cmdBox.currentText() == "Canal 144":
-			print("canal144fr")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Radio/canal144fr")
-		elif self.cmdBox.currentText() == "FM 97.1":
-			print("fm97.1fr")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Radio/fm97.1fr")
-		elif self.cmdBox.currentText() == "SiriusXM 144":
-			print("siriusXM144fr")
-			result = vrTest(ADB_DEVICE, "fr-CA", "Radio/siriusXM144fr")
+			
+			elif self.cmdBox.currentText() == "Composer un numero":
+				print("ASDFS BAFDG")
+			
+			
+			elif self.cmdBox.currentText() == "Appeler Pierre Durand":
+				print("appelerPierreDurand")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appelerPierreDurand")
+			elif self.cmdBox.currentText() == "Appeler PierDurand sur cellulaire":
+				print("appelerPierreDurandSurCellulaire")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appelerPierreDurandSurCellulaire")
+			elif self.cmdBox.currentText() == "Composer 2486626203":
+				print("composer2486626203")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/composer2486626203")
+			elif self.cmdBox.currentText() == "Changer l'appareil Bluetooth":
+				print("changerLappareilBluetooth")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/changerLappareilBluetooth")
+			# French - Radio
+			elif self.cmdBox.currentText() == "AM 1080":
+				print("am1080fr")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/am1080fr")
+			elif self.cmdBox.currentText() == "Canal 144":
+				print("canal144fr")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/canal144fr")
+			elif self.cmdBox.currentText() == "FM 97.1":
+				print("fm97.1fr")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/fm97.1fr")
+			elif self.cmdBox.currentText() == "SiriusXM 144":
+				print("siriusXM144fr")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/siriusXM144fr")
 		
 		# Spanish - Navigation
-		elif self.cmdBox.currentText() == "Encontrar direccion en California":
-			print("encontrarDireccionEnCalifornia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarDireccionEnCalifornia")
-		elif self.cmdBox.currentText() == "Encontrar Bancos":
-			print("encontrarBancos")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarBancos")
-		elif self.cmdBox.currentText() == "Reanudar ruta":
-			print("reanudarRuta")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/reanudarRuta")
-		elif self.cmdBox.currentText() == "Pausar ruta":
-			print("pausarRuta")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/pausarRuta")
-		elif self.cmdBox.currentText() == "Cancelar ruta":
-			print("cancelarRuta")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cancelarRuta")
-		elif self.cmdBox.currentText() == "Ir a Casa":
-			print("irACasa")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/irACasa")
-		elif self.cmdBox.currentText() == "Cambiar Casa":
-			print("cambiarCasa")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cambiarCasa")
-		elif self.cmdBox.currentText() == "Ir al trabajo":
-			print("irAlTrabajo")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/irAlTrabajo")
-		elif self.cmdBox.currentText() == "Cambiar Trabajo":
-			print("cambiarTrabajo")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cambiarTrabajo")
-		elif self.cmdBox.currentText() == "Puntos previos":
-			print("puntosPrevios")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosPrevios")
-		elif self.cmdBox.currentText() == "Destinos anteriores":
-			print("destinosAnteriores")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/destinosAnteriores")
-		elif self.cmdBox.currentText() == "Puntos de inicio anteriores":
-			print("puntosDeInicioAnteriores")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosDeInicioAnteriores")
-		elif self.cmdBox.currentText() == "Puntos frecuentados":
-			print("puntosFrecuentados")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosFrecuentados")
-		elif self.cmdBox.currentText() == "Opciones de Ruta":
-			print("opcionesDeRuta")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/opcionesDeRuta")
-		elif self.cmdBox.currentText() == "Liberta de direccion":
-			print("libertaDeDireccion")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/libertaDeDireccion")
-		elif self.cmdBox.currentText() == "Acercar":
-			print("acercar")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/acercar")
-		elif self.cmdBox.currentText() == "Alejar":
-			print("alejar")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/alejar")
-		elif self.cmdBox.currentText() == "Informacion de destino":
-			print("informacionDeDestino")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/informacionDeDestino")
-		elif self.cmdBox.currentText() == "Informacion del trafico":
-			print("informacionDelTrafico")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/informacionDelTrafico")
-		elif self.cmdBox.currentText() == "Servicios de Emergencia":
-			print("serviciosDeEmergencia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/serviciosDeEmergencia")
-		elif self.cmdBox.currentText() == "Estacion de Policia":
-			print("estacionDePolicia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/estacionDePolicia")
-		elif self.cmdBox.currentText() == "Hospital":
-			print("hospital")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/hospital")
-		elif self.cmdBox.currentText() == "Concesionaria":
-			print("concesionaria")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/concesionaria")
-		elif self.cmdBox.currentText() == "Asistencia en carretera":
-			print("asistenciaEnCarretera")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/asistenciaEnCarretera")
-		elif self.cmdBox.currentText() == "Activar Guia":
-			print("activarGuia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/activarGuia")
-		elif self.cmdBox.currentText() == "Desactivar Guia":
-			print("desactivarGuia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/desactivarGuia")
-		elif self.cmdBox.currentText() == "Mostrar Ruta":
-			print("mostrarRuta")
-			result = vrTest(ADB_DEVICE, "es-MX", "Navigation/mostrarRuta")
-		# Spanish - Phone
-		elif self.cmdBox.currentText() == "Llamar":
-			print("llamar")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamar")
-		elif self.cmdBox.currentText() == "Marcar numero":
-			print("marcarNumero")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/marcarNumero")
-		elif self.cmdBox.currentText() == "Llamar a Juan Garcia":
-			print("llamarAJuanGarcia")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamarAJuanGarcia")
-		elif self.cmdBox.currentText() == "Llamar a Juan Garcia al movil":
-			print("llamarAJuanGarciaAlMovil")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamarAJuanGarciaAlMovil")
-		elif self.cmdBox.currentText() == "Marcar 2486626203":
-			print("marcar2486626203")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/marcar2486626203")
-		elif self.cmdBox.currentText() == "Cambiar dispositivo Bluetooth":
-			print("cambiarDispositivoBluetooth")
-			result = vrTest(ADB_DEVICE, "es-MX", "Phone/cambiarDispositivoBluetooth")
-		# Spanish - Radio
-		elif self.cmdBox.currentText() == "AM 1080":
-			print("am1080es")
-			result = vrTest(ADB_DEVICE, "es-MX", "Radio/am1080es")
-		elif self.cmdBox.currentText() == "Canal 144":
-			print("canal144es")
-			result = vrTest(ADB_DEVICE, "es-MX", "Radio/canal144es")
-		elif self.cmdBox.currentText() == "FM 97.1":
-			print("fm97.1es")
-			result = vrTest(ADB_DEVICE, "es-MX", "Radio/fm97.1es")
-		elif self.cmdBox.currentText() == "SiriusXM 144":
-			print("siriusXM144es")
-			result = vrTest(ADB_DEVICE, "es-MX", "Radio/siriusXM144es")
+		elif self.languageBox.currentText() == "es-MX":
+			if self.cmdBox.currentText() == "Encontrar direccion en California":
+				print("encontrarDireccionEnCalifornia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarDireccionEnCalifornia")
+			elif self.cmdBox.currentText() == "Encontrar Bancos":
+				print("encontrarBancos")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarBancos")
+			
+			# NEED RESPONSE FROM NEW SW
+			elif self.cmdBox.currentText() == "Reanudar ruta":
+				print("reanudarRuta")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/reanudarRuta")
+			elif self.cmdBox.currentText() == "Pausar ruta":
+				print("pausarRuta")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/pausarRuta")
+			
+			
+			elif self.cmdBox.currentText() == "Cancelar ruta":
+				print("cancelarRuta")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cancelarRuta")
+			elif self.cmdBox.currentText() == "Ir a Casa":
+				print("irACasa")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/irACasa")
+			elif self.cmdBox.currentText() == "Cambiar Casa":
+				print("cambiarCasa")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cambiarCasa")
+			elif self.cmdBox.currentText() == "Ir al trabajo":
+				print("irAlTrabajo")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/irAlTrabajo")
+			elif self.cmdBox.currentText() == "Cambiar Trabajo":
+				print("cambiarTrabajo")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cambiarTrabajo")
+			elif self.cmdBox.currentText() == "Puntos previos":
+				print("puntosPrevios")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosPrevios")
+			elif self.cmdBox.currentText() == "Destinos anteriores":
+				print("destinosAnteriores")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/destinosAnteriores")
+			elif self.cmdBox.currentText() == "Puntos de inicio anteriores":
+				print("puntosDeInicioAnteriores")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosDeInicioAnteriores")
+			elif self.cmdBox.currentText() == "Puntos frecuentados":
+				print("puntosFrecuentados")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosFrecuentados")
+			elif self.cmdBox.currentText() == "Opciones de Ruta":
+				print("opcionesDeRuta")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/opcionesDeRuta")
+			elif self.cmdBox.currentText() == "Liberta de direccion":
+				print("libertaDeDireccion")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/libertaDeDireccion")
+			elif self.cmdBox.currentText() == "Acercar":
+				print("acercar")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/acercar")
+			elif self.cmdBox.currentText() == "Alejar":
+				print("alejar")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/alejar")
+			
+			# HU RESPONSE DEPENDS ON LOCATION... FIND SOME WAY TO NOTIFY USER
+			elif self.cmdBox.currentText() == "Informacion de destino":
+				print("informacionDeDestino")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/informacionDeDestino")
+			
+			
+			elif self.cmdBox.currentText() == "Informacion del trafico":
+				print("informacionDelTrafico")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/informacionDelTrafico")
+			elif self.cmdBox.currentText() == "Servicios de Emergencia":
+				print("serviciosDeEmergencia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/serviciosDeEmergencia")
+			elif self.cmdBox.currentText() == "Estacion de Policia":
+				print("estacionDePolicia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/estacionDePolicia")
+			elif self.cmdBox.currentText() == "Hospital":
+				print("hospital")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/hospital")
+			elif self.cmdBox.currentText() == "Concesionaria":
+				print("concesionaria")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/concesionaria")
+			elif self.cmdBox.currentText() == "Asistencia en carretera":
+				print("asistenciaEnCarretera")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/asistenciaEnCarretera")
+			elif self.cmdBox.currentText() == "Activar Guia":
+				print("activarGuia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/activarGuia")
+			elif self.cmdBox.currentText() == "Desactivar Guia":
+				print("desactivarGuia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/desactivarGuia")
+			elif self.cmdBox.currentText() == "Mostrar Ruta":
+				print("mostrarRuta")
+				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/mostrarRuta")
+			# Spanish - Phone
+			elif self.cmdBox.currentText() == "Llamar":
+				print("llamar")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamar")
+			elif self.cmdBox.currentText() == "Marcar numero":
+				print("marcarNumero")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/marcarNumero")
+			elif self.cmdBox.currentText() == "Llamar a Juan Garcia":
+				print("llamarAJuanGarcia")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamarAJuanGarcia")
+			elif self.cmdBox.currentText() == "Llamar a Juan Garcia al movil":
+				print("llamarAJuanGarciaAlMovil")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/llamarAJuanGarciaAlMovil")
+			elif self.cmdBox.currentText() == "Marcar 2486626203":
+				print("marcar2486626203")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/marcar2486626203")
+			elif self.cmdBox.currentText() == "Cambiar dispositivo Bluetooth":
+				print("cambiarDispositivoBluetooth")
+				result = vrTest(ADB_DEVICE, "es-MX", "Phone/cambiarDispositivoBluetooth")
+			# Spanish - Radio
+			elif self.cmdBox.currentText() == "AM 1080":
+				if self.languageBox.currentText() == "es-MX":
+					print("am1080es")
+					result = vrTest(ADB_DEVICE, "es-MX", "Radio/am1080es")
+			elif self.cmdBox.currentText() == "Canal 144":
+				if self.languageBox.currentText() == "es-MX":	
+					print("canal144es")
+					result = vrTest(ADB_DEVICE, "es-MX", "Radio/canal144es")
+			elif self.cmdBox.currentText() == "FM 97.1":
+				if self.languageBox.currentText() == "es-MX":
+					print("fm97.1es")
+					result = vrTest(ADB_DEVICE, "es-MX", "Radio/fm97.1es")
+			elif self.cmdBox.currentText() == "SiriusXM 144":
+				if self.languageBox.currentText() == "es-MX":	
+					print("siriusXM144es")
+					result = vrTest(ADB_DEVICE, "es-MX", "Radio/siriusXM144es")
 	
 		print(result)
 		
@@ -569,8 +619,11 @@ class Window(QtGui.QMainWindow):
 		
 # execute the VR test
 def vrTest(ADB_DEVICE, lang, testCase):
+	print("vrStart")
 	vrStart(ADB_DEVICE)
+	print("vrInput")
 	vrInput(WAV_PATH_NAME, lang, testCase)
+	print("vrOutput")
 	vrOutput(lang)
 	expectedOutputFile = EXPECTED_OUTPUT_FILE_PATH + testCase + "_out.txt"
 	result = checkOutput('out.txt', expectedOutputFile)
