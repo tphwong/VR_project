@@ -148,10 +148,10 @@ class Window(QtGui.QMainWindow):
 					self.cmdBox.clear()
 					list = ["Encontrar direccion en California", "Encontrar Bancos", "Reanudar ruta", "Pausar ruta",
 							"Cancelar ruta", "Ir a Casa", "Cambiar Casa", "Ir al trabajo", "Cambiar Trabajo",
-							"Puntos previos", "Destinos anteriores", "Puntos de inicio anteriores", "Puntos frecuentadoes",
+							"Puntos previos", "Destinos anteriores", "Puntos de inicio anteriores", "Puntos frecuentados",
 							"Opciones de Ruta", "Liberta de direccion", "Acercar", "Alejar", "Informacion de destino",
 							"Informacion del trafico", "Servicios de Emergencia", "Estacion de Policia", "Hospital",
-							"Concesionaria", "Asistencia en carretera", "Activar Guia", "Desactivar Guia", "Monstar Ruta"]
+							"Concesionaria", "Asistencia en carretera", "Activar Guia", "Desactivar Guia", "Mostrar Ruta"]
 					self.cmdBox.addItems(list)
 					
 				elif self.categoryBox.currentText() == "Phone":
@@ -229,6 +229,7 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/addressBook")
 			elif self.cmdBox.currentText() == "Cancel route":
 				print("cancelRoute")
+				# Google interprets the result as "the ROUND has been canceled"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/cancelRoute")
 			elif self.cmdBox.currentText() == "Change home":
 				print("changeHome")
@@ -242,10 +243,12 @@ class Window(QtGui.QMainWindow):
 				print("destinationInformation")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/destinationInformation")
 			
-			
-			elif self.cmdBox.currentText() == "Find 46501 Commerce Center Drm Plymouth, Michigan":
+			# need Blue Link network
+			elif self.cmdBox.currentText() == "Find 46501 Commerce Center Dr, Plymouth, Michigan":
 				print("find46501CommerceCenterDrPlymouthMichigan")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/find46501CommerceCenterDrPlymouthMichigan")
+			
+			
 			elif self.cmdBox.currentText() == "Find Starbucks":
 				print("findStarbucks")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/findStarbucks")
@@ -258,13 +261,10 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Go to work":
 				print("goToWork")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/goToWork")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Pause route":
 				print("pauseRoute")
+				# result inconsistent; Google sometimes interprets as "causing groung guidance"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/pauseRoute")
-			
-			
 			elif self.cmdBox.currentText() == "Previous destinations":
 				print("previousDestinations")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousDestinations")
@@ -274,14 +274,10 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Previous starting points":
 				print("previousStartingPoints")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/previousStartingPoints")
-			
-			#NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Resume route":
 				print("resumeRoute")
-				result = vrTest(ADB_DEVICE, "en-US", "Navigation/resumeRoute")
-			
-			
-			elif self.cmdBox.currentText() == "Route Options":
+				result = vrTest(ADB_DEVICE, "en-US", "Navigation/resumeRoute")		
+			elif self.cmdBox.currentText() == "Route options":
 				print("routeOptions")
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/routeOptions")
 			elif self.cmdBox.currentText() == "Show route":
@@ -292,15 +288,19 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/trafficInformation")
 			elif self.cmdBox.currentText() == "Turn guidance off":
 				print("turnGuidanceOff")
+				# inconsistent results: on/off confuses both HU and Google
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOff")
 			elif self.cmdBox.currentText() == "Turn guidance on":
 				print("turnGuidanceOn")
+				# inconsistent results: on/off confuses both HU and Google
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/turnGuidanceOn")
 			elif self.cmdBox.currentText() == "Zoom in":
 				print("zoomIn")
+				# inconsistent results; Google interprets as "map to men", "Matt Damon", etc.
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomIn")
 			elif self.cmdBox.currentText() == "Zoom out":
 				print("zoomOut")
+				# inconsistent results; Google interprets as "map to Mount", etc.
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomOut")
 			# English - Phone
 			elif self.cmdBox.currentText() == "Call":
@@ -308,11 +308,11 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Phone/call")
 			elif self.cmdBox.currentText() == "Call John Smith":
 				print("callJohnSmith")
-				result = vvrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmith")
+				result = vrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmith")
 			elif self.cmdBox.currentText() == "Call John Smith on mobile":
 				print("callJohnSmithOnMobile")
 				result = vrTest(ADB_DEVICE, "en-US", "Phone/callJohnSmithOnMobile")
-			elif self.cmdBox.currentText() == "Change Bluetooth Device":
+			elif self.cmdBox.currentText() == "Change Bluetooth device":
 				print("changeBluetoothDevice")
 				result = vrTest(ADB_DEVICE, "en-US", "Phone/changeBluetoothDevice")
 			elif self.cmdBox.currentText() == "Dial 2486626203":
@@ -321,6 +321,7 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Dial number":
 				print("dialNumber")
 				result = vrTest(ADB_DEVICE, "en-US", "Phone/dialNumber")
+			# need Blue Link network
 			elif self.cmdBox.currentText() == "Send message to John Smith":
 				print("sendMessageToJohnSmith")
 				result = vrTest(ADB_DEVICE, "en-US", "Phone/sendMessageToJohnSmith")
@@ -330,7 +331,7 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Radio/am1080en")
 			elif self.cmdBox.currentText() == "Channel 144":
 				print("channel144en")
-				result = vrTest(ADB_DEVICE, "en-US", "Radio/channel144enen")
+				result = vrTest(ADB_DEVICE, "en-US", "Radio/channel144en")
 			elif self.cmdBox.currentText() == "FM 97.1":
 				print("fm97.1en")
 				result = vrTest(ADB_DEVICE, "en-US", "Radio/fm97.1en")
@@ -340,22 +341,24 @@ class Window(QtGui.QMainWindow):
 		
 		# French - Navigation
 		elif self.languageBox.currentText() == "fr-CA":
+			
+			# only supports certain states; need response from both supported and unsupported states
 			if self.cmdBox.currentText() == "Chercher l'adresse en Quebec":
 				print("chercherLadresseEnQuebec")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/chercherLadresseEnQuebec")
+			
+			
 			elif self.cmdBox.currentText() == "Trouver les banque":
 				print("trouverLesBanque")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trouverLesBanque")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Trajet en pause":
 				print("trajetEnPause")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/trajetEnPause")
 			elif self.cmdBox.currentText() == "Continuer trajet":
 				print("continuerTrajet")
+				# response validation inconsistent
+				# "reprendre le guidage des trajets" vs. "reprendre le guidage du trajets"
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/continuerTrajet")
-			
-			# RE-RECORD annulerLitineraire.wav
 			elif self.cmdBox.currentText() == "Annuler l'itineraire":
 				print("annulerLitineraire")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/annulerLitineraire")
@@ -375,36 +378,25 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Points de depart precedentes":
 				print("pointsDeDepartPrecedents")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsDeDepartPrecedents")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Points frequentes":
 				print("pointsFrequentes")
+				# depends on number of entries; assume >1 entry
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/pointsFrequentes")
-			
-			
 			elif self.cmdBox.currentText() == "Aller a la Maison":
 				print("allerALaMaison")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerALaMaison")
 			elif self.cmdBox.currentText() == "Info. Trafic":
 				print("infoTrafic")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/infoTrafic")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Modifier Maison":
 				print("modifierMaison")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierMaison")
-			
-			
 			elif self.cmdBox.currentText() == "Aller au travail":
 				print("allerAuTravail")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/allerAuTravail")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Modifier travail":
 				print("modifierTravail")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/modifierTravail")
-			
-			
 			elif self.cmdBox.currentText() == "Options itineraire":
 				print("optionsItineraire")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Navigation/optionsItineraire")
@@ -445,12 +437,9 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Appeler":
 				print("appeler")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appeler")
-		
-			
 			elif self.cmdBox.currentText() == "Composer un numero":
-				print("ASDFS BAFDG")
-			
-			
+				print("composerUnNumero")
+				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/composerUnNumero")
 			elif self.cmdBox.currentText() == "Appeler Pierre Durand":
 				print("appelerPierreDurand")
 				result = vrTest(ADB_DEVICE, "fr-CA", "Phone/appelerPierreDurand")
@@ -472,6 +461,8 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/canal144fr")
 			elif self.cmdBox.currentText() == "FM 97.1":
 				print("fm97.1fr")
+				# response sound output potential issue
+				# voice overlap -> Google interpreted as 97.4 instead of 97.1
 				result = vrTest(ADB_DEVICE, "fr-CA", "Radio/fm97.1fr")
 			elif self.cmdBox.currentText() == "SiriusXM 144":
 				print("siriusXM144fr")
@@ -479,22 +470,22 @@ class Window(QtGui.QMainWindow):
 		
 		# Spanish - Navigation
 		elif self.languageBox.currentText() == "es-MX":
+			
+			# only supports certain states; need response from both supported and unsupported states
 			if self.cmdBox.currentText() == "Encontrar direccion en California":
 				print("encontrarDireccionEnCalifornia")
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarDireccionEnCalifornia")
+			
+			
 			elif self.cmdBox.currentText() == "Encontrar Bancos":
 				print("encontrarBancos")
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/encontrarBancos")
-			
-			# NEED RESPONSE FROM NEW SW
 			elif self.cmdBox.currentText() == "Reanudar ruta":
 				print("reanudarRuta")
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/reanudarRuta")
 			elif self.cmdBox.currentText() == "Pausar ruta":
 				print("pausarRuta")
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/pausarRuta")
-			
-			
 			elif self.cmdBox.currentText() == "Cancelar ruta":
 				print("cancelarRuta")
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/cancelarRuta")
@@ -521,6 +512,7 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosDeInicioAnteriores")
 			elif self.cmdBox.currentText() == "Puntos frecuentados":
 				print("puntosFrecuentados")
+				# depends on number of entries; assume >1 entry
 				result = vrTest(ADB_DEVICE, "es-MX", "Navigation/puntosFrecuentados")
 			elif self.cmdBox.currentText() == "Opciones de Ruta":
 				print("opcionesDeRuta")
