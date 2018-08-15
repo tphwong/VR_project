@@ -229,7 +229,8 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/addressBook")
 			elif self.cmdBox.currentText() == "Cancel route":
 				print("cancelRoute")
-				# Google interprets the result as "the ROUND has been canceled"
+				# Google always interprets the result as "the ROUND has been canceled"
+				# cancelRoute_out.txt has been modified to "the round has been canceled"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/cancelRoute")
 			elif self.cmdBox.currentText() == "Change home":
 				print("changeHome")
@@ -263,7 +264,7 @@ class Window(QtGui.QMainWindow):
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/goToWork")
 			elif self.cmdBox.currentText() == "Pause route":
 				print("pauseRoute")
-				# result inconsistent; Google sometimes interprets as "causing groung guidance"
+				# result inconsistent; Google sometimes interprets as "causing ground guidance"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/pauseRoute")
 			elif self.cmdBox.currentText() == "Previous destinations":
 				print("previousDestinations")
@@ -297,10 +298,12 @@ class Window(QtGui.QMainWindow):
 			elif self.cmdBox.currentText() == "Zoom in":
 				print("zoomIn")
 				# inconsistent results; Google interprets as "map to men", "Matt Damon", etc.
+				# zoomIn_out.txt has been modified to "map to men"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomIn")
 			elif self.cmdBox.currentText() == "Zoom out":
 				print("zoomOut")
 				# inconsistent results; Google interprets as "map to Mount", etc.
+				# zoomOut_out.txt has been modified to "map to Mount"
 				result = vrTest(ADB_DEVICE, "en-US", "Navigation/zoomOut")
 			# English - Phone
 			elif self.cmdBox.currentText() == "Call":
