@@ -1,0 +1,30 @@
+missing module named PySide - imported by C:\Python34\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt4plugins.py
+missing module named resource - imported by posix, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named posix - imported by os, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named _posixsubprocess - imported by subprocess, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named 'org.python' - imported by pickle, Z:\Projects\VR_project\test\vrGui6.1.py, xml.sax
+missing module named ce - imported by os, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named readline - imported by cmd, code, pdb, Z:\Projects\VR_project\test\vrGui6.1.py
+excluded module named _frozen_importlib - imported by importlib, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named _winreg - imported by platform, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named 'java.lang' - imported by platform, Z:\Projects\VR_project\test\vrGui6.1.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named termios - imported by tty, getpass, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named urllib.urlencode - imported by urllib, speech_recognition
+missing module named _dummy_threading - imported by dummy_threading, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named grp - imported by tarfile, shutil, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named org - imported by copy, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, getpass, Z:\Projects\VR_project\test\vrGui6.1.py
+missing module named monotonic - imported by speech_recognition
+missing module named 'googleapiclient.http' - imported by speech_recognition
+missing module named 'googleapiclient.errors' - imported by speech_recognition
+missing module named googleapiclient - imported by speech_recognition
+missing module named oauth2client - imported by speech_recognition
+missing module named sphinxbase._ad_alsa - imported by sphinxbase, sphinxbase.ad_alsa
+missing module named sphinxbase._ad_pulse - imported by sphinxbase, sphinxbase.ad_pulse
+missing module named ad_openal - imported by sphinxbase
+missing module named __builtin__ - imported by sphinxbase.ad_win32, sphinxbase.sphinxbase, pocketsphinx.pocketsphinx
+missing module named snowboydetect - imported by speech_recognition
+missing module named urllib2 - imported by speech_recognition

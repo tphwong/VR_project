@@ -56,19 +56,18 @@ This tool is developed for the following purposes:
 	It targets the top-level VR commands listed under All Menus -> Voice Commands.
 	
 - Setup:
-	. Download the entire folders of "dist", "audio_files", and "expected_output_files".
-	. Put the "dist" folder, which contains vrGui6.exe, in your local drive (preferrably somewhere in Z:).
-	. Put the "audio_files" folder, which contains .wav audio files, in the following location:
-		Z:/Projects/VR_project/audio_files/
-	. Put the "expected_output_files" folder, which contains .txt files, to the following location:
-		Z:/Projects/VR_project/expected_output_files/
-	(Please follow the exact paths when moving audio_files and expected_output_files folders,
-	path change and assignment are not implemented as of 8/15/2018.)
+	. Download and extract the files from VR_GUI_beta_20180815.zip.
+	. Make sure you have the following folders:
+		audio_files
+		dist
+		expected_output_files
+		README.txt
+	. The application you need to run is called vrGui6.1.exe. It is located in dist/vrGui6.1.
 
 	
 4. Using the GUI
 ================
-- In the "dist" folder, go into vrGui6, then find and execute vrGui6.exe. 
+- In the "dist" folder, go into vrGui6.1, then find and execute vrGui6.1.exe. 
   The security software on your PC may ask you whether you want to allow or block the application. 
   Always allow the application.
 
